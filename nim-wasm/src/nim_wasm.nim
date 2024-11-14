@@ -6,5 +6,4 @@ when isMainModule:
   let
     env = loadWasmEnv(readFile("src/hello.wasm"))
     addFunc = env.findFunction("add")
-  # echo "Add result: " & $addFunc.call(int32, 3i32, 4i32)
-  echo "foo"
+  echo "Add result: " & $addFunc.call(int32, 3i32, 4i32)
