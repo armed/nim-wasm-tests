@@ -4,6 +4,6 @@ import pkg/wasm3
 
 when isMainModule:
   let
-    env = loadWasmEnv(readFile("src/hello.wasm"))
+    env = loadWasmEnv(readFile("maths.wasm"))
     addFunc = env.findFunction("add")
   echo "Add result: " & $addFunc.call(int32, 3i32, 4i32)
